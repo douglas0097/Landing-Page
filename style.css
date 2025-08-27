@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.6;
+    background-color: #0a192f; 
+    color: #ccd6f6; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.header {
+    background-color: #112240; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    color: #61dafb; 
+    text-decoration: none;
+    letter-spacing: 1px; 
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;                                             
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #ccd6f6;   
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.header nav a:hover {
+    color: #61dafb; 
+    transform: translateY(-2px);
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%); 
+    color: #ccd6f6; 
+    text-align: center;
+    padding: 8rem 0; 
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(130, 87, 230, 0.1) 0%, transparent 70%); /* Roxo para o efeito */
+    animation: rotateBackground 20s linear infinite; /* Animação para o brilho */
+    z-index: 1;
+}
+
+@keyframes rotateBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero h1 {
+    font-size: 3.8rem; 
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(97, 218, 251, 0.3); 
+}
+
+.hero p {
+    font-size: 1.3rem; 
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #8892b0; 
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; 
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 8px; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra para o botão */
+}
+
+.cta-button:hover {
+    background-color: #61dafb; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(97, 218, 251, 0.4); 
+}
+
+/* Time */
+
+.team {
+    padding: 6rem 0;
+    background-color: #0a192f;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: #61dafb; 
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #8257e6; 
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.team-member-card {
+    background: #112240; 
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #007bff; 
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.team-member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #007bff; 
+    margin-bottom: 1.5rem;
+}
+
+.team-member-card h3 {
+    font-size: 1.6rem;
+    color: #ccd6f6;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-card .role {
+    font-size: 1rem;
+    color: #8257e6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-member-card .bio {
+    color: #8892b0; 
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #8892b0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid #8892b0;
+    width: 40px;
+    height: 40px;
+    line-height: 36px; 
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Footer */
+.footer {
+    background-color: #0a192f; 
+    color: #8892b0; 
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid #112240; 
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #007bff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #61dafb; 
+}
