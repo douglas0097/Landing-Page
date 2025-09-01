@@ -11,7 +11,7 @@
 
     <header class="header">
         <div class="container">
-            <nav>
+            <nav class="menu">
                 <ul>
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#team">Time</a></li>
@@ -72,32 +72,58 @@
         </section>
 
         <section id="team-details" class="team-details">
-        <div class="container">
-            <h2>Nossos Líderes em Detalhes</h2>
+            <div class="container">
+                <h2>Nossos Líderes em Detalhes</h2>
 
-            <div class="member-detail">
-                <div class="member-photo">
-                    <img src="./images/douglas.jpeg" alt="Foto Douglas">
-                </div>
-                <div class="member-info">
-                    <h3>Douglas Almeida</h3>
-                    <p class="subinfo">Suporte Redes e Infraestrutura</p>
-                    <p class="description">
-                        Com mais de 3 anos de experiência no área de tecnologia, Douglas hoje trabalha na IXC Soft. Atuando no suporte na área de rede e infraestrutura, com foco em servidores Linux. Realizando manutenção e troubleshooting de sistemas, bancos de dados (MariaDB/MySQL), serviços web, backups e desempenho de hardware. Verificando configuração de serviços e análise de logs, garantindo estabilidade e segurança da infraestrutura dos clientes.
-                    </p>
-                    <div class="skills">
-                        <h4>Skills:</h4>
-                        <div class="buttons">
-                            <span>Linux</span>
-                            <span>Debian</span>
-                            <span>Redes</span>
-                            <span>Java</span>
+                <div class="member-detail">
+                    <div class="member-photo">
+                        <img src="./images/douglas.jpeg" alt="Foto Douglas">
+                    </div>
+                    <div class="member-info">
+                        <h3>Douglas Almeida</h3>
+                        <p class="subinfo">Suporte Redes e Infraestrutura</p>
+                        <p class="description">
+                            Com mais de 3 anos de experiência no área de tecnologia, Douglas hoje trabalha na IXC Soft. Atuando no suporte na área de rede e infraestrutura, com foco em servidores Linux. Realizando manutenção e troubleshooting de sistemas, bancos de dados (MariaDB/MySQL), serviços web, backups e desempenho de hardware. Verificando configuração de serviços e análise de logs, garantindo estabilidade e segurança da infraestrutura dos clientes.
+                        </p>
+                        <div class="skills">
+                            <h4>Skills:</h4>
+                            <div class="buttons">
+                                <span>Linux</span>
+                                <span>Debian</span>
+                                <span>Redes</span>
+                                <span>Java</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p class="section-subtitle">Tem alguma pergunta ou quer iniciar um projeto? Preencha o formulário abaixo.</p>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Sua Mensagem</label>
+                        <textarea id="message" name="message" rows="6"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="cta-button">Enviar Mensagem</button>
+                    </div>
+                </form>
+                <p id="form-message"></p>
+            </div>
+        </section>
 
     </main>
 
@@ -108,6 +134,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
