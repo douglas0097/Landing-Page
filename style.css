@@ -265,6 +265,10 @@ body {
     margin-bottom: 5rem;
 }
 
+.member-detail.reverse {
+  flex-direction: row-reverse;
+}
+
 /* Classe para alternar o layout: imagem na direita */
 .member-detail.reverse {
     flex-direction: row-reverse;
